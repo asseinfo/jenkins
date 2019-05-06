@@ -11,7 +11,7 @@ docker run -u root --name jenkins_master --restart always -p 8080:8080 -p 50000:
 Configure the below command in **Launch agent via execution of command on the master**:
 
 ```bash
-docker run -i --rm --name agent --init asseinfo/jenkins-slave
+ssh -o StrictHostKeyChecking=no [user]@[host] docker run -i --rm --name agent --init asseinfo/jenkins-slave
 ```
 
 after setting Remote root directory to `/home/jenkins/agent`.
